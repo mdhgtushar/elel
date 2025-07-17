@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Students – HW Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex items-center justify-between">
+      <h1 class="text-2xl md:text-4xl font-bold text-indigo-600">📚 ELEL HW</h1>
+      <nav class="space-x-4 text-sm md:text-base">
+        <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+        <a href="students.html" class="text-indigo-600 font-semibold underline">Students</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <div class="w-full p-0 md:px-10">
+    <img src="https://e-laeltd.com/assets/img/banner.jpg" alt="Banner" class="w-full h-auto object-cover" />
+  </div>
+
+  <!-- Student List -->
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-6">
+    <h2 class="text-2xl font-semibold text-indigo-600 mb-6">👨‍🎓 WE – Batch 3 - Lab B</h2>
+    <div id="student-list" class="grid md:grid-cols-2 gap-6"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-500 text-sm border-t">
+    © 2025 Developed by <a href="https://mdhgtushar.github.io" class="text-blue-600 font-bold">Hobayer Golondaz Tushar</a>
+  </footer>
+
+  <!-- JSON Renderer -->
+  <script>
+    const students = [
+      {
+        name: "Hobayer Golondaz Tushar", 
+        batch: "Student – [E-Learning & Earning LTD]",
+        phone: "+8801302855453"
+      },
+      {
+        name: "MD Kawsar Akanda", 
+        batch: "Student – [E-Learning & Earning LTD]",
+        phone: "N/A"
+      },
+      {
+        name: "Reqwanul Islam Ashik",  
+        batch: "Student – [E-Learning & Earning LTD]",
+        phone: "N/A"
+      }
+    ];
+
+    const container = document.getElementById("student-list");
+
+    function getInitials(name) {
+      return name
+        .split(' ')
+        .map(word => word[0])
+        .join('')
+        .toUpperCase();
+    }
+
+    students.forEach(student => {
+      const card = document.createElement("div");
+      card.className = "bg-white p-6 rounded-xl shadow flex items-center space-x-4";
+
+      const initials = getInitials(student.name);
+
+      card.innerHTML = `
+        <div class="flex-shrink-0 w-14 h-14 bg-indigo-500 text-white rounded-full flex items-center justify-center text-lg font-bold uppercase">
+          ${initials}
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800">${student.name}</h3>
+          <p class="text-gray-600">${student.batch}</p>
+          <p class="text-sm text-gray-500">
+            📞 ${student.phone !== "N/A" 
+              ? `<a href="tel:${student.phone}" class="text-blue-600 hover:underline">${student.phone}</a>` 
+              : "N/A"}
+          </p>
+        </div>
+      `;
+
+      container.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
