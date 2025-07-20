@@ -36,6 +36,14 @@
   <script>
     const homeworkData = [
       {
+        date: "20 July 2025",
+        tasks: [
+          { subject: "📣 Digital Marketing", task: "N/A" },
+          { subject: "🎨 Graphic Design", task: "Cover photo (jader hoy nai)<br>Title, tag, description research" },
+          { subject: "💻 Website Development", task: "Excel: Student result process" }
+        ]
+      },
+      {
         date: "19 July 2025",
         tasks: [
           { subject: "📣 Digital Marketing", task: "Facebook Audience build up" },
@@ -82,21 +90,21 @@
         ]
       }
     ];
-
+  
     const container = document.getElementById('homework-list');
-
+  
     homeworkData.forEach(day => {
       const section = document.createElement('div');
       section.className = 'bg-white rounded-xl shadow p-6';
-
+  
       const heading = document.createElement('h2');
       heading.className = 'text-xl font-semibold text-indigo-600 mb-4';
       heading.textContent = `📅 ${day.date}`;
       section.appendChild(heading);
-
+  
       const list = document.createElement('ul');
       list.className = 'space-y-4';
-
+  
       day.tasks.forEach(task => {
         const li = document.createElement('li');
         li.innerHTML = `
@@ -107,10 +115,11 @@
         `;
         list.appendChild(li);
       });
-
+  
       section.appendChild(list);
       container.appendChild(section);
     });
   </script>
+  
 </body>
 </html>
