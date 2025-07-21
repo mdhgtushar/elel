@@ -32,94 +32,112 @@
     © 2025 Developed by <a href="https://mdhgtushar.github.io" class="text-blue-600 font-bold">Hobayer Golondaz Tushar</a>
   </footer>
 
-  <!-- Embedded JSON Data + Renderer -->
-  <script>
-    const homeworkData = [
-      {
-        date: "20 July 2025",
-        tasks: [
-          { subject: "📣 Digital Marketing", task: "N/A" },
-          { subject: "🎨 Graphic Design", task: "Cover photo (jader hoy nai)<br>Title, tag, description research" },
-          { subject: "💻 Website Development", task: "Excel: Student result process" }
-        ]
-      },
-      {
-        date: "19 July 2025",
-        tasks: [
-          { subject: "📣 Digital Marketing", task: "Facebook Audience build up" },
-          { subject: "🎨 Graphic Design", task: "1. 6 cover design for SEOClerks<br>2. 5 new cover photos" },
-          { subject: "💻 Website Development", task: "Excel: Attendance sheet" }
-        ]
-      },
-      {
-        date: "18 July 2025",
-        tasks: [
-          { subject: "🛑 Holiday", task: "💤 Friday (Off Day / Holiday)" }
-        ]
-      },
-      {
-        date: "17 July 2025",
-        tasks: [
-          { subject: "💻 Website Development", task: "Excel: Salary sheet with formulas" },
-          { subject: "📣 Digital Marketing", task: "Visitor info tracking (GTM)" },
-          { subject: "🎨 Graphic Design", task: "Sir nai" }
-        ]
-      },
-      {
-        date: "16 July 2025",
-        tasks: [
-          { subject: "🎨 Graphic Design", task: "1. FB Cover 2 ta<br>2. 4-5 ta picture er hair masking tool er kaj" },
-          { subject: "📣 Digital Marketing", task: "N/A" },
-          { subject: "💻 Website Development", task: "N/A" }
-        ]
-      },
-      {
-        date: "10 July 2025",
-        tasks: [
-          { subject: "📣 Digital Marketing", task: "Create a storytelling video with a voice-over." },
-          { subject: "🎨 Graphic Design", task: "N/A" },
-          { subject: "💻 Website Development", task: "N/A" }
-        ]
-      },
-      {
-        date: "7 July 2025",
-        tasks: [
-          { subject: "📣 Digital Marketing", task: "1. Change Username<br>2. Access Page<br>3. Instant Messaging<br>4. Add Automated Questions" },
-          { subject: "🎨 Graphic Design", task: "N/A" },
-          { subject: "💻 Website Development", task: "N/A" }
-        ]
-      }
-    ];
-  
-    const container = document.getElementById('homework-list');
-  
-    homeworkData.forEach(day => {
-      const section = document.createElement('div');
-      section.className = 'bg-white rounded-xl shadow p-6';
-  
-      const heading = document.createElement('h2');
-      heading.className = 'text-xl font-semibold text-indigo-600 mb-4';
-      heading.textContent = `📅 ${day.date}`;
-      section.appendChild(heading);
-  
-      const list = document.createElement('ul');
-      list.className = 'space-y-4';
-  
-      day.tasks.forEach(task => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-          <div>
-            <div class="font-medium text-gray-700 mb-1">${task.subject}:</div>
-            <div class="pl-4 text-gray-800">${task.task}</div>
-          </div>
-        `;
-        list.appendChild(li);
-      });
-  
-      section.appendChild(list);
-      container.appendChild(section);
+<!-- Embedded JSON Data + Renderer -->
+<script>
+  const homeworkData = [
+    {
+      date: "21 July 2025",
+      tasks: [
+        {
+          subject: "📣 Digital Marketing",
+          task: "Chele: meyeder kache chata bikrir post<br>Meye: cheleder jonno chata bikrir post"
+        },
+        {
+          subject: "💻 Website Development",
+          task: "Excel: VLOOKUP practice"
+        },
+        {
+          subject: "🎨 Graphic Design",
+          task: 'Make 10 color from <a href="https://colorhunt.co/" target="_blank" class="text-blue-600 underline">colorhunt.co</a>'
+        }
+      ]
+    },
+    {
+      date: "20 July 2025",
+      tasks: [
+        { subject: "📣 Digital Marketing", task: "N/A" },
+        { subject: "🎨 Graphic Design", task: "Cover photo (jader hoy nai)<br>Title, tag, description research" },
+        { subject: "💻 Website Development", task: "Excel: Student result process" }
+      ]
+    },
+    {
+      date: "19 July 2025",
+      tasks: [
+        { subject: "📣 Digital Marketing", task: "Facebook Audience build up" },
+        { subject: "🎨 Graphic Design", task: "1. 6 cover design for SEOClerks<br>2. 5 new cover photos" },
+        { subject: "💻 Website Development", task: "Excel: Attendance sheet" }
+      ]
+    },
+    {
+      date: "18 July 2025",
+      tasks: [
+        { subject: "🛑 Holiday", task: "💤 Friday (Off Day / Holiday)" }
+      ]
+    },
+    {
+      date: "17 July 2025",
+      tasks: [
+        { subject: "💻 Website Development", task: "Excel: Salary sheet with formulas" },
+        { subject: "📣 Digital Marketing", task: "Visitor info tracking (GTM)" },
+        { subject: "🎨 Graphic Design", task: "Sir nai" }
+      ]
+    },
+    {
+      date: "16 July 2025",
+      tasks: [
+        { subject: "🎨 Graphic Design", task: "1. FB Cover 2 ta<br>2. 4-5 ta picture er hair masking tool er kaj" },
+        { subject: "📣 Digital Marketing", task: "N/A" },
+        { subject: "💻 Website Development", task: "N/A" }
+      ]
+    },
+    {
+      date: "10 July 2025",
+      tasks: [
+        { subject: "📣 Digital Marketing", task: "Create a storytelling video with a voice-over." },
+        { subject: "🎨 Graphic Design", task: "N/A" },
+        { subject: "💻 Website Development", task: "N/A" }
+      ]
+    },
+    {
+      date: "7 July 2025",
+      tasks: [
+        { subject: "📣 Digital Marketing", task: "1. Change Username<br>2. Access Page<br>3. Instant Messaging<br>4. Add Automated Questions" },
+        { subject: "🎨 Graphic Design", task: "N/A" },
+        { subject: "💻 Website Development", task: "N/A" }
+      ]
+    }
+  ];
+
+  const container = document.getElementById('homework-list');
+
+  homeworkData.forEach(day => {
+    const section = document.createElement('div');
+    section.className = 'bg-white rounded-xl shadow p-6';
+
+    const heading = document.createElement('h2');
+    heading.className = 'text-xl font-semibold text-indigo-600 mb-4';
+    heading.textContent = `📅 ${day.date}`;
+    section.appendChild(heading);
+
+    const list = document.createElement('ul');
+    list.className = 'space-y-4';
+
+    day.tasks.forEach(task => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <div>
+          <div class="font-medium text-gray-700 mb-1">${task.subject}:</div>
+          <div class="pl-4 text-gray-800">${task.task}</div>
+        </div>
+      `;
+      list.appendChild(li);
     });
-  </script>
+
+    section.appendChild(list);
+    container.appendChild(section);
+  });
+</script>
+
   
 </body>
 </html>
