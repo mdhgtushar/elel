@@ -23,19 +23,7 @@
   <div class="w-full p-0 md:px-10">
     <img src="https://e-laeltd.com/assets/img/banner.jpg" alt="Banner" class="w-full h-auto object-cover" />
   </div>
-<!-- Full Screen Notice Popup -->
-<div id="fullScreenPopup" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-  <div class="bg-white rounded-2xl p-6 max-w-md text-center shadow-xl">
-    <h2 class="text-lg font-bold text-red-600 mb-4">📢 গুরুত্বপূর্ণ ঘোষণা</h2>
-    <p class="text-gray-800 mb-6 leading-relaxed">
-      নাম রেজিস্ট্রেশন করতে আশিক ভাই এর সাথে যোগাযোগ করুন। <br> আশিক ভাই জিন্দাবাদ।
-    </p>
-    <button onclick="document.getElementById('fullScreenPopup').style.display='none'"
-            class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full shadow">
-      বুঝেছি ✅
-    </button>
-  </div>
-</div>
+
   <!-- Homework List -->
   <main id="homework-list" class="max-w-6xl mx-auto px-4 py-10 space-y-6"></main>
 
@@ -47,6 +35,23 @@
 <!-- Embedded JSON Data + Renderer -->
 <script>
   const homeworkData = [
+    {
+      date: "29 July 2025",
+      tasks: [
+        {
+          subject: "📣 Digital Marketing",
+          task: "N/A"
+        },
+        {
+          subject: "💻 Website Development",
+          task: "N/A"
+        },
+        {
+          subject: "🎨 Graphic Design",
+          task: "N/A"
+        }
+      ]
+    },
     {
       date: "28 July 2025",
       tasks: [
